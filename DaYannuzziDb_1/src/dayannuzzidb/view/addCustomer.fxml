@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="462.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dayannuzzidb.view.AddCustomerController">
+   <children>
+      <Label layoutX="42.0" layoutY="40.0" prefHeight="51.0" prefWidth="171.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="101.0" prefHeight="17.0" prefWidth="30.0" text="ID" />
+      <Label layoutX="73.0" layoutY="151.0" prefHeight="17.0" prefWidth="51.0" text="Name" />
+      <Label layoutX="72.0" layoutY="186.0" prefHeight="17.0" prefWidth="60.0" text="Address" />
+      <Label layoutX="73.0" layoutY="262.0" prefHeight="17.0" prefWidth="51.0" text="Phone" />
+      <TextField fx:id="txtID" disable="true" layoutX="140.0" layoutY="96.0" text="auto-generated">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="txtName" layoutX="141.0" layoutY="146.0" />
+      <TextField fx:id="txtAddress" layoutX="140.0" layoutY="181.0" />
+      <TextField fx:id="txtZip" layoutX="140.0" layoutY="218.0" />
+      <TextField fx:id="txtPhone" layoutX="141.0" layoutY="257.0" promptText="777-777-7777" />
+      <Button fx:id="btnSave" layoutX="200.0" layoutY="389.0" mnemonicParsing="false" onAction="#saveHandler" text="Save" />
+      <Button fx:id="btnCancel" layoutX="259.0" layoutY="389.0" mnemonicParsing="false" onAction="#cancelHandler" text="Cancel" />
+      <ComboBox fx:id="cboCountry" layoutX="27.0" layoutY="324.0" onAction="#initializeCity" prefWidth="150.0" promptText="Country" />
+      <ComboBox fx:id="cboCity" layoutX="200.0" layoutY="324.0" prefWidth="150.0" promptText="City" />
+      <Label layoutX="72.0" layoutY="223.0" prefHeight="17.0" prefWidth="61.0" text="Zip Code" />
+   </children>
+</AnchorPane>

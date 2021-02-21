@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dayannuzzidb.view.MainScreenController">
+   <children>
+      <AnchorPane layoutX="29.0" layoutY="14.0" prefHeight="258.0" prefWidth="601.0">
+         <children>
+            <TableView fx:id="custTableView" layoutX="5.0" layoutY="55.0" prefHeight="149.0" prefWidth="567.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="55.0">
+              <columns>
+                <TableColumn fx:id="custID" prefWidth="45.0" text="ID" />
+                <TableColumn fx:id="custName" prefWidth="170.0" text="Name" />
+                  <TableColumn fx:id="custAddress" prefWidth="236.0" text="Address" />
+                  <TableColumn fx:id="custPhone" prefWidth="131.0" text="Phone#" />
+              </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <Button fx:id="btnAdd" layoutX="188.0" layoutY="207.0" mnemonicParsing="false" onAction="#addHandler" prefHeight="27.0" prefWidth="109.0" text="Add Customer" />
+            <Button fx:id="btnModify" layoutX="316.0" layoutY="207.0" mnemonicParsing="false" onAction="#modifyHandler" prefHeight="27.0" prefWidth="129.0" text="Modify Customer" />
+            <Button fx:id="btnDelete" layoutX="468.0" layoutY="207.0" mnemonicParsing="false" onAction="#deleteHandler" prefHeight="27.0" prefWidth="129.0" text="Delete Customer" />
+            <Label layoutX="221.0" layoutY="9.0" prefHeight="38.0" prefWidth="95.0" text="Customers">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAppt" layoutX="5.0" layoutY="207.0" mnemonicParsing="false" onAction="#apptHandler" prefHeight="27.0" prefWidth="147.0" text="Make Appointment" />
+            <Button fx:id="btnSearch" layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchHandler" text="Search" />
+            <TextField fx:id="txtSearch" layoutX="419.0" layoutY="14.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="262.0" prefHeight="349.0" prefWidth="616.0">
+         <children>
+            <RadioButton fx:id="radioMonth" layoutX="30.0" layoutY="54.0" mnemonicParsing="false" onAction="#monthlyHandler" text="by month">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioWeek" layoutX="133.0" layoutY="54.0" mnemonicParsing="false" onAction="#weeklyHandler" text="by week" toggleGroup="$toggleGroup" />
+            <Label layoutX="226.0" layoutY="14.0" prefHeight="38.0" prefWidth="197.0" text="Appointment Calendar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnExit" layoutX="20.0" layoutY="289.0" mnemonicParsing="false" onAction="#exitHandler" prefHeight="27.0" prefWidth="67.0" text="Exit" />
+            <TableView fx:id="apptTableView" layoutX="20.0" layoutY="82.0" prefHeight="200.0" prefWidth="589.0">
+              <columns>
+                <TableColumn fx:id="apptCustName" prefWidth="113.0" text="Name" />
+                <TableColumn fx:id="apptType" prefWidth="90.0" text="Type" />
+                  <TableColumn fx:id="apptStart" prefWidth="177.0" text="Start" />
+                  <TableColumn fx:id="apptEnd" prefWidth="187.0" text="End" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnModifyAppt" layoutX="325.0" layoutY="289.0" mnemonicParsing="false" onAction="#modifyApptHandler" prefHeight="27.0" prefWidth="135.0" text="View/Modify Appt." />
+            <Button fx:id="btnDeleteAppt" layoutX="480.0" layoutY="289.0" mnemonicParsing="false" onAction="#deleteApptHandler" prefHeight="27.0" prefWidth="129.0" text="Delete Appt." />
+            <Button fx:id="btnReport" layoutX="455.0" layoutY="50.0" mnemonicParsing="false" onAction="#reportHandler" prefHeight="27.0" prefWidth="147.0" text="View Reports" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
